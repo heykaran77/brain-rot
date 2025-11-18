@@ -2,17 +2,18 @@ import { TfiEmail } from "react-icons/tfi";
 
 const Hero = () => {
   return (
-    <div className="my-40 flex w-full flex-col items-center justify-center space-y-4">
-      <h1 className="max-w-2xl bg-linear-to-br from-amber-100 to-amber-500 bg-clip-text text-center text-7xl leading-20 font-bold tracking-tight text-transparent">
+    <div className="relative my-24 flex w-full flex-col items-center justify-center space-y-4">
+      <div className="absolute top-10 left-60 -z-10 h-1/2 w-1/2 rounded-full bg-amber-500/20 blur-3xl max-sm:hidden"></div>
+      <h1 className="max-w-2xl bg-linear-to-br from-amber-100 to-amber-500 bg-clip-text text-center text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-7xl">
         Unleash the power of intuitive finance.
       </h1>
-      <p className="max-w-2xl text-neutral-300 selection:bg-white selection:text-neutral-600">
+      <p className="max-w-2xl text-center text-sm text-neutral-300 selection:bg-white selection:text-neutral-600 md:text-xl">
         Say goodbye to the outdated financial tools. Every small business owner,
         regardless of the background, can now manage their business like a pro.
         Simple. Intuitive. And never boring.
       </p>
 
-      <div className="flex w-full max-w-xl justify-center gap-2">
+      <div className="mt-4 flex w-full max-w-xl flex-wrap justify-center gap-2">
         <div className="group flex flex-1 items-center gap-4 rounded-lg border border-neutral-700 px-4 text-white placeholder:text-neutral-600">
           <TfiEmail className="text-neutral-600" />
           <input
