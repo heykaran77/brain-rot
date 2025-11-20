@@ -13,7 +13,19 @@
           "(prefers-color-scheme: dark)"
         ).matches;
 
-        if (savedTheme === "dark" || (!savedTheme && systemTheme)) {
+        // Determine which theme to apply
+        let themeToApply;
+        if (savedTheme === "dark") {
+          themeToApply = "dark";
+        } else if (savedTheme === "light") {
+          themeToApply = "light";
+        } else {
+          // "system" or no saved theme - use system preference
+          themeToApply = systemTheme ? "dark" : "light";
+        }
+
+        // Apply theme immediately to prevent flash
+        if (themeToApply === "dark") {
           document.documentElement.classList.add("dark");
           document.documentElement.classList.remove("light");
         } else {
