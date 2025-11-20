@@ -36,11 +36,6 @@ export const ThemeProvider = ({ children }) => {
 
     mediaQuery.addEventListener("change", handleSystemChange);
     localStorage.setItem("theme", theme);
-    // if (theme === "system") {
-    //   localStorage.removeItem("theme");
-    // } else {
-    //   localStorage.setItem("theme", theme);
-    // }
     return () => mediaQuery.removeEventListener("change", handleSystemChange);
   }, [theme]);
 
