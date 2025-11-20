@@ -5,6 +5,8 @@
   --foreground: var(--color-neutral-950);
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 .dark {
   --background: var(--color-neutral-950);
   --foreground: var(--color-neutral-50);

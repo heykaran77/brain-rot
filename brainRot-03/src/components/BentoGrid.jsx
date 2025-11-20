@@ -2,11 +2,11 @@ import { BsGithub, BsGrid, BsTwitterX } from "react-icons/bs";
 
 const BentoGrid = () => {
   return (
-    <div className="max-w-4xl mx-auto minh-screen py-16">
+    <div className="max-w-3xl mx-auto minh-screen py-16 px-4">
       <div className="grid grid-cols-1 md:grid-cols-2">
-        <Card className="md:border-r md:border-b border-neutral-200">
+        <Card className="md:border-r md:border-b dark:border-neutral-800 border-neutral-200">
           <CardHeader>
-            <BsGithub className="size-6 text-neutral-600" />
+            <BsGithub className="size-6 text-neutral-600 dark:text-neutral-400" />
             <CardTitle>
               {
                 [
@@ -25,9 +25,9 @@ const BentoGrid = () => {
           </CardDescription>
           <CardSkeleton></CardSkeleton>
         </Card>
-        <Card className="md:border-b border-neutral-200">
+        <Card className="md:border-b border-neutral-200 dark:border-neutral-800">
           <CardHeader>
-            <BsGrid className="size-6 text-neutral-600" />
+            <BsGrid className="size-6 text-neutral-600 dark:text-neutral-400" />
             <CardTitle>
               {
                 [
@@ -48,7 +48,7 @@ const BentoGrid = () => {
         </Card>
         <Card className="md:col-span-2">
           <CardHeader>
-            <BsTwitterX className="size-6 text-neutral-600" />
+            <BsTwitterX className="size-6 text-neutral-600 dark:text-neutral-400" />
             <CardTitle>
               {
                 [
@@ -78,7 +78,7 @@ export default BentoGrid;
 const CardSkeleton = ({ children, className }) => {
   return (
     <div
-      className={`h-60 bg-neutral-100 shadow-md w-full my-4 rounded-lg overflow-hidden bg-[radial-gradient(var(--color-neutral-200)_1px,transparent_1px)] bg-size-[10px_10px] ${className}`}>
+      className={`h-60 bg-neutral-100 dark:bg-neutral-800 shadow-md w-full my-4 rounded-lg overflow-hidden bg-[radial-gradient(var(--color-neutral-200)_1px,transparent_1px)] dark:bg-[radial-gradient(var(--color-neutral-900)_1px,transparent_1px)] bg-size-[10px_10px] ${className}`}>
       {children}
     </div>
   );
@@ -95,7 +95,7 @@ const CardHeader = ({ children, className }) => {
 const CardTitle = ({ children, className }) => {
   return (
     <h2
-      className={`text-neutral-600 font-medium tracking-tight text-lg ${className}`}>
+      className={`text-neutral-600 dark:text-neutral-300 font-medium tracking-tight text-lg ${className}`}>
       {children}
     </h2>
   );
@@ -103,6 +103,9 @@ const CardTitle = ({ children, className }) => {
 
 const CardDescription = ({ children, className }) => {
   return (
-    <p className={`text-neutral-400 mt-2 text-sm ${className}`}>{children}</p>
+    <p
+      className={`text-neutral-400 dark:text-neutral-600 mt-2 text-sm ${className}`}>
+      {children}
+    </p>
   );
 };
