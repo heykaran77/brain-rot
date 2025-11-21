@@ -2,7 +2,7 @@ import React from "react";
 
 const Form = () => {
   return (
-    <form className="h-full w-full rounded-lg bg-neutral-200/50 px-8 py-10">
+    <form className="mx-4 h-full w-full max-w-3xl rounded-lg bg-neutral-200/40 px-8 py-10 backdrop-blur-md md:mx-auto">
       <h2 className="bg-linear-to-b from-neutral-700 to-neutral-400 bg-clip-text text-center text-4xl font-semibold tracking-tighter text-transparent">
         This is an{" "}
         <span className="relative z-10 inline-block text-white after:absolute after:inset-0 after:-z-10 after:h-full after:w-full after:-skew-4 after:bg-red-500 after:content-['']">
