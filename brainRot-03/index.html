@@ -6,25 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>brainrot-03</title>
     <script>
-      //iffe for detecting system theme
+      // iffe for detecting system theme
       (function () {
-        const savedTheme = localStorage.getItem("theme");
-        const systemTheme = window.matchMedia(
+        let savedTheme = localStorage.getItem("theme");
+        let systemTheme = window.matchMedia(
           "(prefers-color-scheme: dark)"
         ).matches;
 
-        // Determine which theme to apply
         let themeToApply;
         if (savedTheme === "dark") {
           themeToApply = "dark";
         } else if (savedTheme === "light") {
           themeToApply = "light";
         } else {
-          // "system" or no saved theme - use system preference
           themeToApply = systemTheme ? "dark" : "light";
         }
 
-        // Apply theme immediately to prevent flash
         if (themeToApply === "dark") {
           document.documentElement.classList.add("dark");
           document.documentElement.classList.remove("light");

@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+html,
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
 :root {
   --background: var(--color-neutral-50);
   --foreground: var(--color-neutral-950);
@@ -14,10 +20,4 @@
 
 @theme inline {
   --color-background: var(--background);
-}
-
-html,
-body {
-  background-color: var(--background);
-  color: var(--foreground);
 }
