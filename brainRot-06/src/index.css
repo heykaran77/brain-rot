@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Inter";
+  background-color: var(--color-gray-50);
+}
+
+.card {
+  @apply relative max-w-xl mx-auto block shadow-sm overflow-hidden;
+}
+
+.overlay {
+  @apply after:content-[''] after:absolute after:inset-0 after:opacity-0 after:backdrop-blur-xs after:bg-neutral-500/20 after:h-full after:w-full hover:after:opacity-100 after:transition-all after:duration-300;
+}
