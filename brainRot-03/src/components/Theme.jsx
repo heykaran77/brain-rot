@@ -1,4 +1,3 @@
-import React from "react";
 import { BsMoon, BsSun } from "react-icons/bs";
 import { useTheme } from "../context/ThemeContext";
 import { MdComputer } from "react-icons/md";
